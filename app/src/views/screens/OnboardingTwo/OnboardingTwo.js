@@ -7,6 +7,7 @@ import Hearts from '../../../assets/images/Hearts.svg';
 import Google from '../../../assets/images/Google.svg';
 import Facebook from '../../../assets/images/Facebook.svg';
 export default function OnboardingTwo() {
+  const navigation = useNavigation();
   return (
     <View style={styles.Container}>
       <View style={styles.contentContainer}>
@@ -20,7 +21,9 @@ export default function OnboardingTwo() {
           <TouchableOpacity style={styles.contentContainer4}>
             <Text style={styles.textStyle}>Create Your Account</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.contentContainer4}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('SignIn')}
+            style={styles.contentContainer4}>
             <Text style={styles.textStyle}>Sign In to Your Account</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.contentContainer4}>
