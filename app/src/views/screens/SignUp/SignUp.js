@@ -52,7 +52,10 @@ export default function SignUp() {
               />
             </View>
             <View style={styles.contentContainer3}>
-              <CustomButton title="Sign Up" />
+              <CustomButton
+                title="Sign Up"
+                customClick={() => navigation.navigate('AboutYourself1')}
+              />
             </View>
             <View style={styles.bottomView}>
               <Text style={styles.textStyle2}>Don't have an account?</Text>
