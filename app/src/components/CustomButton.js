@@ -22,7 +22,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 50,
-    marginTop: hp('2%'),
     marginBottom: hp('2%'),
     flexDirection: 'row',
     // shadowOffset: {
@@ -36,6 +35,6 @@ const styles = StyleSheet.create({
   text: {
     color: appColor.white,
     fontFamily: fontFamily.fontRegular,
-    fontSize: hp('2.1%'),
+    fontSize: hp('2.2%'),
   },
 });

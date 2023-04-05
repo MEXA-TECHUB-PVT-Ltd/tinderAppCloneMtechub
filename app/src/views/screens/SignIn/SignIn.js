@@ -30,6 +30,12 @@ export default function SignIn() {
               <TextInputCustom placeholder="Username" />
               <CustomTextInput placeholder="Password" />
             </View>
+            <View style={styles.contentContainer6}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('ForgetPassword')}>
+            <Text style={styles.textStyle4}>Forget Password?</Text>
+          </TouchableOpacity>
+        </View>
             <View style={styles.contentContainer3}>
               <CustomButton title="Sign in" />
             </View>

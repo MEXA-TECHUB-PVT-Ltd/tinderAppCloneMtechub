@@ -19,6 +19,8 @@ import {createStackNavigator} from '@react-navigation/stack';
  import OnboardingOne from './app/src/views/screens/OnboardingOne/OnboardingOne';
  import OnboardingTwo from './app/src/views/screens/OnboardingTwo/OnboardingTwo';
 import SignIn from './app/src/views/screens/SignIn/SignIn';
+import ForgetPassword from './app/src/views/screens/ForgetPassword/ForgetPassword';
+
 function App(): JSX.Element {
   const Stack = createStackNavigator();
   return (
@@ -42,6 +44,11 @@ function App(): JSX.Element {
         <Stack.Screen
         name="SignIn"
         component={SignIn}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="ForgetPassword"
+        component={ForgetPassword}
         options={{headerShown: false}}
       />
       
