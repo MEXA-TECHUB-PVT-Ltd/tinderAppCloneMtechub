@@ -37,7 +37,7 @@ const STYLES = StyleSheet.create({
     marginTop: hp('1%'),
   },
   contentContainer3: {
-    marginTop: hp('5%'),
+    marginTop: hp('3%'),
   },
   contentContainer4: {
     width: wp('100%'),
@@ -79,6 +79,16 @@ const STYLES = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  contentContainer6: {
+    width: wp('80%'),
+    alignItems: 'flex-end',
+    marginVertical: '1.5%',
+  },
+  textStyle4: {
+    fontFamily: fontFamily.fontMedium,
+    color: appColor.pink,
+    fontSize: hp('1.5%'),
   },
 });
 
