@@ -18,7 +18,7 @@ import {createStackNavigator} from '@react-navigation/stack';
  import Onboarding from './app/src/views/screens/Onboarding/Onboarding';
  import OnboardingOne from './app/src/views/screens/OnboardingOne/OnboardingOne';
  import OnboardingTwo from './app/src/views/screens/OnboardingTwo/OnboardingTwo';
-
+import SignIn from './app/src/views/screens/SignIn/SignIn';
 function App(): JSX.Element {
   const Stack = createStackNavigator();
   return (
@@ -37,6 +37,11 @@ function App(): JSX.Element {
       <Stack.Screen
         name="OnboardingTwo"
         component={OnboardingTwo}
+        options={{headerShown: false}}
+      />
+        <Stack.Screen
+        name="SignIn"
+        component={SignIn}
         options={{headerShown: false}}
       />
       
