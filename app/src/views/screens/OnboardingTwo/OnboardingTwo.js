@@ -18,7 +18,9 @@ export default function OnboardingTwo() {
       </View>
       <View style={styles.contentContainer3}>
         <View style={styles.contentContainer}>
-          <TouchableOpacity style={styles.contentContainer4}>
+          <TouchableOpacity 
+           onPress={() => navigation.navigate('SignUp')}
+          style={styles.contentContainer4}>
             <Text style={styles.textStyle}>Create Your Account</Text>
           </TouchableOpacity>
           <TouchableOpacity
