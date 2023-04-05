@@ -1,5 +1,5 @@
-import {View, Text, TextInput, StyleSheet} from 'react-native';
-import React from 'react';
+import {View, Text, TextInput, StyleSheet,TouchableOpacity} from 'react-native';
+import React,{useState} from 'react';
 import {appColor} from '../consts/colors';
 import {fontFamily} from '../consts/fonts';
 import {
@@ -7,6 +7,7 @@ import {
     heightPercentageToDP as hp,
   } from 'react-native-responsive-screen';
   import Eye from '../assets/images/Eye.svg';
+
 
 export default function CustomTextInput(props) {
   return (
@@ -24,10 +25,11 @@ export default function CustomTextInput(props) {
      // style={props.style}
       blurOnSubmit={false}
       value={props.value}
+      secureTextEntry={props.secureTextEntry}
     />
+    <TouchableOpacity onPress={props.customClick}>
     <Eye/>
-
-
+    </TouchableOpacity>
   </View>
   )
 }

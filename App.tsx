@@ -21,6 +21,8 @@ import {createStackNavigator} from '@react-navigation/stack';
 import SignIn from './app/src/views/screens/SignIn/SignIn';
 import ForgetPassword from './app/src/views/screens/ForgetPassword/ForgetPassword';
 import Verification from './app/src/views/screens/Verification/Verification';
+import ResetPassword from './app/src/views/screens/ResetPassword/ResetPassword';
+
 function App(): JSX.Element {
   const Stack = createStackNavigator();
   return (
@@ -54,6 +56,11 @@ function App(): JSX.Element {
         <Stack.Screen
         name="Verification"
         component={Verification}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="ResetPassword"
+        component={ResetPassword}
         options={{headerShown: false}}
       />
       

@@ -1,5 +1,5 @@
 import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
@@ -12,6 +12,8 @@ import CustomTextInput from '../../../components/CustomTextInput';
 import CustomButton from '../../../components/CustomButton';
 export default function SignIn() {
   const navigation = useNavigation();
+  const [Show, setShow] = useState(false);
+  const [Visible, setVisible] = useState(true);
   return (
     <LinearGradient colors={['#FD397F', '#FF675D']} style={styles.Container}>
       <ScrollView
@@ -28,14 +30,21 @@ export default function SignIn() {
           <View style={styles.contentContainer}>
             <View style={styles.contentContainer2}>
               <TextInputCustom placeholder="Username" />
-              <CustomTextInput placeholder="Password" />
+              <CustomTextInput
+                placeholder="Password"
+                secureTextEntry={Visible}
+                customClick={() => {
+                  setVisible(!Visible);
+                  setShow(!Show);
+                }}
+              />
             </View>
             <View style={styles.contentContainer6}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('ForgetPassword')}>
-            <Text style={styles.textStyle4}>Forget Password?</Text>
-          </TouchableOpacity>
-        </View>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('ForgetPassword')}>
+                <Text style={styles.textStyle4}>Forget Password?</Text>
+              </TouchableOpacity>
+            </View>
             <View style={styles.contentContainer3}>
               <CustomButton title="Sign in" />
             </View>
