@@ -22,7 +22,7 @@ import SignIn from './app/src/views/screens/SignIn/SignIn';
 import ForgetPassword from './app/src/views/screens/ForgetPassword/ForgetPassword';
 import Verification from './app/src/views/screens/Verification/Verification';
 import ResetPassword from './app/src/views/screens/ResetPassword/ResetPassword';
-
+import SignUp from './app/src/views/screens/SignUp/SignUp';
 function App(): JSX.Element {
   const Stack = createStackNavigator();
   return (
@@ -61,6 +61,11 @@ function App(): JSX.Element {
       <Stack.Screen
         name="ResetPassword"
         component={ResetPassword}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUp}
         options={{headerShown: false}}
       />
       
