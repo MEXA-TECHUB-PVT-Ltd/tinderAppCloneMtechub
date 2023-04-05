@@ -7,11 +7,16 @@ import LogoWhite from '../../../assets/images/LogoWhite.svg';
 import BackIcon from '../../../assets/images/BackIcon.svg';
 import TextInputCustom from '../../../components/TextInputCustom';
 import CustomButton from '../../../components/CustomButton';
-import OTPInputView from '@twotalltotems/react-native-otp-input';
-export default function Verification() {
+import CustomTextInput from '../../../components/CustomTextInput';
+export default function ResetPassword() {
   const navigation = useNavigation();
-  const [Otp, setOtp] = useState();
-  const [Success, setSuccess] = useState(false);
+  const [Show, setShow] = useState(false);
+  const [Visible, setVisible] = useState(true);
+  const [ShowConfirm, setShowConfirm] = useState(false);
+  const [ConfirmVisible, setConfirmVisible] = useState(true);
+  const [Password, setPassword] = useState('');
+  const [confirmPassword, setconfirmPassword] = useState('');
+
   return (
     <LinearGradient colors={['#FD397F', '#FF675D']} style={styles.Container}>
       <ScrollView
@@ -21,24 +26,29 @@ export default function Verification() {
           <LogoWhite style={styles.imageStyle} />
         </View>
         <View style={styles.card}>
-          <Text style={styles.textStyle}>Verification</Text>
+          <Text style={styles.textStyle}>Reset Password</Text>
           <View style={styles.contentContainer}>
-            <View style={styles.TextInputView}>
-              <OTPInputView
-                style={styles.TextinputStyle}
-                pinCount={4}
-                code={Otp}
-                onCodeChanged={code => {
-                  setOtp(code);
+            <View style={styles.contentContainer2}>
+              <CustomTextInput
+                placeholder="New Password"
+                customClick={() => {
+                  setVisible(!Visible), setShow(!Show);
                 }}
-                autoFocusOnLoad={true}
-                codeInputFieldStyle={styles.underlineStyleBase}
+                secureTextEntry={Visible}
+              />
+              <CustomTextInput
+                placeholder="Confirm Password"
+                customClick={() => {
+                  setConfirmVisible(!ConfirmVisible);
+                  setShowConfirm(!ShowConfirm);
+                }}
+                secureTextEntry={ConfirmVisible}
               />
             </View>
             <View style={styles.contentContainer3}>
               <CustomButton
-                title="Verify"
-                customClick={() => navigation.navigate('ResetPassword')}
+                title="Reset Password"
+                customClick={() => navigation.navigate('SignIn')}
               />
             </View>
           </View>
