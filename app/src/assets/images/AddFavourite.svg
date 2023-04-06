@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141" height="141" viewBox="0 0 141 141">
+  <defs>
+    <filter id="Rectangle_705" x="0" y="0" width="141" height="141" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="14" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1296" data-name="Group 1296" transform="translate(864 -1756)">
+    <g transform="matrix(1, 0, 0, 1, -864, 1756)" filter="url(#Rectangle_705)">
+      <rect id="Rectangle_705-2" data-name="Rectangle 705" width="57" height="57" rx="28.5" transform="translate(38 28)" fill="#fff"/>
+    </g>
+    <path id="Icon_awesome-star" data-name="Icon awesome-star" d="M11.261.732,8.576,6.176l-6.008.876A1.317,1.317,0,0,0,1.84,9.3l4.347,4.236L5.159,19.516A1.315,1.315,0,0,0,7.067,20.9l5.375-2.825L17.816,20.9a1.316,1.316,0,0,0,1.908-1.386L18.7,13.533,23.042,9.3a1.317,1.317,0,0,0-.728-2.245l-6.008-.876L13.622.732a1.317,1.317,0,0,0-2.36,0Z" transform="translate(-809.441 1802.001)" fill="#f6d700"/>
+  </g>
+</svg>

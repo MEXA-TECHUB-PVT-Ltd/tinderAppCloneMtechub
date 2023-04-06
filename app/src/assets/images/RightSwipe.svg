@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141" height="141" viewBox="0 0 141 141">
+  <defs>
+    <filter id="Rectangle_705" x="0" y="0" width="141" height="141" filterUnits="userSpaceOnUse">
+      <feOffset dx="4" dy="14" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feFlood flood-opacity="0.051"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_1297" data-name="Group 1297" transform="translate(941 -1756)">
+    <g transform="matrix(1, 0, 0, 1, -941, 1756)" filter="url(#Rectangle_705)">
+      <rect id="Rectangle_705-2" data-name="Rectangle 705" width="57" height="57" rx="28.5" transform="translate(38 28)" fill="#fff"/>
+    </g>
+    <g id="love_copy_2" data-name="love copy 2" transform="translate(-889.588 1797.412)">
+      <g id="Group_1295" data-name="Group 1295">
+        <rect id="love_copy_2-2" data-name="love copy 2" width="31" height="31" transform="translate(-0.412 -0.412)" fill="none"/>
+        <path id="Vector" d="M16.667,0a6.278,6.278,0,0,1,4.271,1.653,5.457,5.457,0,0,1,1.772,3.983c0,4.409-6.879,10.05-9.836,12.271a2.547,2.547,0,0,1-3.037,0C6.879,15.686,0,10.046,0,5.637A5.393,5.393,0,0,1,1.273,2.173a6.09,6.09,0,0,1,3.287-2A6.443,6.443,0,0,1,8.472.478a5.9,5.9,0,0,1,2.883,2.485A5.858,5.858,0,0,1,13.576.8,6.405,6.405,0,0,1,16.667,0Z" transform="translate(3.588 5.588)" fill="#fc3c56"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -12,8 +12,18 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
+import {appColor} from './app/src/consts/colors';
+import { fontFamily } from './app/src/consts/fonts';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+//Images
+import Home from './app/src/assets/images/Home.svg';
+import DotIcon from './app/src/assets/images/DotIcon.svg';
+import ChatIcon from './app/src/assets/images/ChatIcon.svg';
+import DiscoverIcon from './app/src/assets/images/DiscoverIcon.svg';
+import NotificationIcon from './app/src/assets/images/NotificationIcon.svg';
+import UserIcon from './app/src/assets/images/UserIcon.svg';
  //Screens
  import Onboarding from './app/src/views/screens/Onboarding/Onboarding';
  import OnboardingOne from './app/src/views/screens/OnboardingOne/OnboardingOne';
@@ -30,8 +40,125 @@ import AboutYourself4 from './app/src/views/screens/AboutYourself4/AboutYourself
 import AboutYourself5 from './app/src/views/screens/AboutYourself5/AboutYourself5';
 import AboutYourself6 from './app/src/views/screens/AboutYourself6/AboutYourself6';
 import AboutYourself7 from './app/src/views/screens/AboutYourself7/AboutYourself7';
+import Dashboard from './app/src/views/screens/Dashboard/Dashboard';
+import ChatList from './app/src/views/screens/ChatList/ChatList';
+import Discover from './app/src/views/screens/Discover/Discover';
+import Notifications from './app/src/views/screens/Notifications/Notifications';
+import Profile from './app/src/views/screens/Profile/Profile';
+
 function App(): JSX.Element {
   const Stack = createStackNavigator();
+  const Tab = createBottomTabNavigator();
+  function MyTabs() {
+    return (
+      <Tab.Navigator
+        screenOptions={{
+          tabBarStyle: {
+            backgroundColor: '#FFFFFF',
+            height: hp('8%'),
+            width: wp('100%'),
+            borderTopWidth: 1,
+            borderTopColor: appColor.grey,
+          },
+        }}>
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarLabel: '',
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                  <Text style={styles.label}>Home</Text>
+                  <DotIcon />
+                </View>
+              ) : (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                  <Home />
+                </View>
+              ),
+          }}
+          name="Dashboard"
+          component={Dashboard}
+        />
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarLabel: '',
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                  <Text style={styles.label}>Chat</Text>
+                  <DotIcon />
+                </View>
+              ) : (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                  <ChatIcon />
+                </View>
+              ),
+          }}
+          name="ChatList"
+          component={ChatList}
+        />
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarLabel: '',
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                  <Text style={styles.label}>Discover</Text>
+                  <DotIcon />
+                </View>
+              ) : (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                  <DiscoverIcon />
+                </View>
+              ),
+          }}
+          name="Discover"
+          component={Discover}
+        />
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarLabel: '',
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                 <Text style={styles.label}>Notification</Text>
+                  <DotIcon />
+                </View>
+              ) : (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                  <NotificationIcon />
+                </View>
+              ),
+          }}
+          name="Notifications"
+          component={Notifications}
+        />
+        <Tab.Screen
+          options={{
+            headerShown: false,
+            tabBarLabel: '',
+            tabBarIcon: ({focused}) =>
+              focused ? (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                  <Text style={styles.label}>Profile</Text>
+                  <DotIcon />
+                </View>
+              ) : (
+                <View style={{alignItems: 'center', marginTop: hp('1%')}}>
+                  <UserIcon/>
+                </View>
+              ),
+          }}
+          name="Profile"
+          component={Profile}
+        />
+      </Tab.Navigator>
+    );
+  }
   return (
     <NavigationContainer>
     <Stack.Navigator screenOptions={{animationEnabled: false}}>
@@ -110,10 +237,11 @@ function App(): JSX.Element {
         component={AboutYourself7}
         options={{headerShown: false}}
       />
-
-  
-      
-      
+      <Stack.Screen
+          name="UserDashboard"
+          component={MyTabs}
+          options={{headerShown: false}}
+        />
     </Stack.Navigator>
   </NavigationContainer>
 
@@ -121,21 +249,10 @@ function App(): JSX.Element {
 }
 
 const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  label:{
+   color:appColor.pink,
+   fontSize:hp('1.5%'),
+   fontFamily:fontFamily.fontMedium
   },
 });
 
