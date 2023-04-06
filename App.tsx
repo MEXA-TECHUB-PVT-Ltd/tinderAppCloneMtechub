@@ -23,6 +23,13 @@ import ForgetPassword from './app/src/views/screens/ForgetPassword/ForgetPasswor
 import Verification from './app/src/views/screens/Verification/Verification';
 import ResetPassword from './app/src/views/screens/ResetPassword/ResetPassword';
 import SignUp from './app/src/views/screens/SignUp/SignUp';
+import AboutYourself1 from './app/src/views/screens/AboutYourself1/AboutYourself1';
+import AboutYourself2 from './app/src/views/screens/AboutYourself2/AboutYourself2';
+import AboutYourself3 from './app/src/views/screens/AboutYourself3/AboutYourself3';
+import AboutYourself4 from './app/src/views/screens/AboutYourself4/AboutYourself4';
+import AboutYourself5 from './app/src/views/screens/AboutYourself5/AboutYourself5';
+import AboutYourself6 from './app/src/views/screens/AboutYourself6/AboutYourself6';
+import AboutYourself7 from './app/src/views/screens/AboutYourself7/AboutYourself7';
 function App(): JSX.Element {
   const Stack = createStackNavigator();
   return (
@@ -68,6 +75,44 @@ function App(): JSX.Element {
         component={SignUp}
         options={{headerShown: false}}
       />
+       <Stack.Screen
+        name="AboutYourself1"
+        component={AboutYourself1}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="AboutYourself2"
+        component={AboutYourself2}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="AboutYourself3"
+        component={AboutYourself3}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="AboutYourself4"
+        component={AboutYourself4}
+        options={{headerShown: false}}
+      />
+        <Stack.Screen
+        name="AboutYourself5"
+        component={AboutYourself5}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="AboutYourself6"
+        component={AboutYourself6}
+        options={{headerShown: false}}
+      />
+       <Stack.Screen
+        name="AboutYourself7"
+        component={AboutYourself7}
+        options={{headerShown: false}}
+      />
+
+  
+      
       
     </Stack.Navigator>
   </NavigationContainer>
