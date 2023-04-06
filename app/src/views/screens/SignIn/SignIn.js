@@ -46,7 +46,10 @@ export default function SignIn() {
               </TouchableOpacity>
             </View>
             <View style={styles.contentContainer3}>
-              <CustomButton title="Sign in" />
+              <CustomButton
+                title="Sign in"
+                customClick={() => navigation.navigate('UserDashboard')}
+              />
             </View>
             <View style={styles.contentContainer4}>
               <View style={styles.line}></View>
