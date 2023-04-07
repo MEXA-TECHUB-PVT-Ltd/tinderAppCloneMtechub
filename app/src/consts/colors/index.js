@@ -10,7 +10,8 @@ const appColor = {
     orangefaded:'#FFF0EF',
     orange:'#FF675D',
     pinkfaded: '#FCF3F8',
-    pinkLight:'#FC77A0'
+    pinkLight:'#FC77A0',
+    divider:'#dcdcdc'
   };
   
   export {appColor};
