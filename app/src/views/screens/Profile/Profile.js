@@ -76,7 +76,9 @@ export default function Profile() {
           </View>
         </View>
       </ScrollView>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('CreatePost')}
+        style={styles.button}>
         <AddImage />
       </TouchableOpacity>
     </View>
