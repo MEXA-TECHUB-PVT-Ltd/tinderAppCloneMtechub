@@ -46,6 +46,7 @@ import Discover from './app/src/views/screens/Discover/Discover';
 import Notifications from './app/src/views/screens/Notifications/Notifications';
 import Profile from './app/src/views/screens/Profile/Profile';
 import Chat from './app/src/views/screens/Chat/Chat';
+import ProfileDetails from './app/src/views/screens/ProfileDetails/ProfileDetails';
 
 function App(): JSX.Element {
   const Stack = createStackNavigator();
@@ -246,6 +247,11 @@ function App(): JSX.Element {
         <Stack.Screen
           name="Chat"
           component={Chat}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="ProfileDetails"
+          component={ProfileDetails}
           options={{headerShown: false}}
         />
     </Stack.Navigator>

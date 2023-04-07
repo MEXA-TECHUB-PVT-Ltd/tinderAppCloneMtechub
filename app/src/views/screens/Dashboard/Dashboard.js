@@ -3,6 +3,7 @@ import React, {useState, useRef} from 'react';
 import styles from './styles';
 import {appColor} from '../../../consts/colors';
 import Swiper from 'react-native-deck-swiper';
+import {useNavigation} from '@react-navigation/native';
 
 import HeartsBackground from '../../../assets/images/HeartsBackground.svg';
 import Menu from '../../../assets/images/Menu.svg';
@@ -18,6 +19,7 @@ import Next from '../../../assets/images/Next.svg';
 import FarAway from '../../../assets/images/FarAway.svg';
 
 export default function Dashboard() {
+  const navigation = useNavigation();
   const swiperRef = useRef();
   const [cardIndex, setCardIndex] = useState(0);
 
@@ -53,7 +55,10 @@ export default function Dashboard() {
             </View>
           </View>
           <View style={styles.contentContainer4}>
-            <Next />
+            <TouchableOpacity
+              onPress={() => navigation.navigate('ProfileDetails')}>
+              <Next />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
