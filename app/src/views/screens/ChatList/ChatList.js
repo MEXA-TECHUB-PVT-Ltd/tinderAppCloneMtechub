@@ -9,7 +9,7 @@ import {
 } from 'react-native-responsive-screen';
 import {useNavigation} from '@react-navigation/native';
 export default function ChatList() {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
   const data = [
     {
       id: 1,
@@ -79,7 +79,7 @@ export default function ChatList() {
     return (
       <View>
         <TouchableOpacity
-           onPress={() => navigation.navigate('Chat')}
+          onPress={() => navigation.navigate('Chat')}
           style={styles.itemContainer01}>
           <View style={styles.imageContainer}>
             <Image
@@ -108,7 +108,7 @@ export default function ChatList() {
                 <Text
                   style={[
                     styles.textStyle4,
-                    {fontFamily: fontFamily.fontRegular, fontSize: hp('1.6%')},
+                    {fontFamily: fontFamily.fontRegular, fontSize: hp('1.5%')},
                   ]}
                   numberOfLines={2}>
                   {item.message}

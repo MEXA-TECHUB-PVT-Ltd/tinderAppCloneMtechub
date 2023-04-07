@@ -19,15 +19,15 @@ const STYLES = StyleSheet.create({
     marginTop: hp('1%'),
   },
   imageContainer: {
-    width: wp('14%'),
-    height: hp('7%'),
+    width: wp('13%'),
+    height: hp('6.5%'),
     backgroundColor: appColor.white,
     borderRadius: 100,
     marginLeft: wp('4.5%'),
   },
   image: {
-    width: wp('14%'),
-    height: hp('7%'),
+    width: wp('13%'),
+    height: hp('6.5%'),
     borderRadius: 100,
   },
   itemContent: {
@@ -42,7 +42,7 @@ const STYLES = StyleSheet.create({
   },
   divider: {
     width: wp('90%'),
-    borderBottomColor: appColor.grey,
+    borderBottomColor: appColor.divider,
     borderBottomWidth: 1,
     marginLeft: wp('5%'),
     marginVertical: hp('1.5%'),
@@ -50,17 +50,17 @@ const STYLES = StyleSheet.create({
   textStyle2: {
     fontFamily: fontFamily.fontRegular,
     color: appColor.black,
-    fontSize: hp('1.9%'),
+    fontSize: hp('1.8%'),
   },
   textStyle3: {
     fontFamily: fontFamily.fontRegular,
     color: appColor.black,
-    fontSize: hp('1.6%'),
+    fontSize: hp('1.5%'),
   },
   textStyle4: {
     fontFamily: fontFamily.fontRegular,
     color: appColor.black,
-    fontSize: hp('1.55%'),
+    fontSize: hp('1.4%'),
     marginHorizontal: '2%',
   },
   listView: {
