@@ -73,7 +73,9 @@ export default function Dashboard() {
             <Menu />
           </TouchableOpacity>
           <Text style={styles.textStyle}>Home</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+          onPress={()=>navigation.navigate('ApplyFilter')}
+          >
             <Filter />
           </TouchableOpacity>
         </View>
