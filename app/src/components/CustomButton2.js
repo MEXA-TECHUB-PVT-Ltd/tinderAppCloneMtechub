@@ -7,7 +7,7 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-export default function CustomButton(props) {
+export default function CustomButton2(props) {
   return (
     <TouchableOpacity style={styles.button} onPress={props.customClick}>
       <Text style={styles.text}>{props.title}</Text>
@@ -16,25 +16,22 @@ export default function CustomButton(props) {
 }
 const styles = StyleSheet.create({
   button: {
-    width: wp('85%'),
-    height: hp('7%'),
-    backgroundColor: appColor.pink,
+    width: wp('38%'),
+    height: hp('6%'),
+    backgroundColor: appColor.white,
+    borderWidth: 1,
+    borderColor: appColor.pink,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 50,
     marginBottom: hp('2%'),
     flexDirection: 'row',
-    // shadowOffset: {
-    //     width: 0,
-    //     height: 1,
-    //   },
-    //   shadowOpacity: 0.25,
-    //   shadowRadius: 2.84,
-    //   elevation: 3,
+    marginRight:wp('5%')
   },
   text: {
-    color: appColor.white,
+    color: appColor.pink,
     fontFamily: fontFamily.fontRegular,
     fontSize: hp('2.2%'),
+
   },
 });

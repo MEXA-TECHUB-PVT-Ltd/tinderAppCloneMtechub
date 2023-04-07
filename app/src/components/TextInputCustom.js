@@ -31,7 +31,7 @@ export default function TextInputCustom(props) {
 
 const styles = StyleSheet.create({
   TextInput: {
-    width: wp('80%'), // 80% of width device screen}
+    width: wp('85%'), // 80% of width device screen}
     height: hp('7%'),
     backgroundColor: '#ffffff',
     borderColor: appColor.border,
