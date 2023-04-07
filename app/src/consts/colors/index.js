@@ -6,6 +6,10 @@ const appColor = {
     border: '#BEBEBE',
     grey:'#BEBEBE',
     greyDark: '#818181',
+    orangefaded:'#FFF0EF',
+    orange:'#FF675D',
+    pinkfaded: '#FCF3F8',
+    pinkLight:'#FC77A0'
   };
   
   export {appColor};

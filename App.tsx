@@ -45,6 +45,7 @@ import ChatList from './app/src/views/screens/ChatList/ChatList';
 import Discover from './app/src/views/screens/Discover/Discover';
 import Notifications from './app/src/views/screens/Notifications/Notifications';
 import Profile from './app/src/views/screens/Profile/Profile';
+import Chat from './app/src/views/screens/Chat/Chat';
 
 function App(): JSX.Element {
   const Stack = createStackNavigator();
@@ -240,6 +241,11 @@ function App(): JSX.Element {
       <Stack.Screen
           name="UserDashboard"
           component={MyTabs}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="Chat"
+          component={Chat}
           options={{headerShown: false}}
         />
     </Stack.Navigator>
