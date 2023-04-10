@@ -55,6 +55,7 @@ import ApplyFilter from './app/src/views/screens/ApplyFilter/ApplyFilter';
 import CreatePost from './app/src/views/screens/CreatePost/CreatePost';
 import Match from './app/src/views/screens/Match/Match';
 import UpdatePassword from './app/src/views/screens/UpdatePassword/UpdatePassword';
+import MyRightSwipes from './app/src/views/screens/MyRightSwipes/MyRightSwipes';
 
 function App(): JSX.Element {
   const Stack = createStackNavigator();
@@ -312,6 +313,11 @@ function App(): JSX.Element {
          <Stack.Screen
           name="UpdatePassword"
           component={UpdatePassword}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MyRightSwipes"
+          component={MyRightSwipes}
           options={{headerShown: false}}
         />
     </Stack.Navigator>
