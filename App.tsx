@@ -56,6 +56,7 @@ import CreatePost from './app/src/views/screens/CreatePost/CreatePost';
 import Match from './app/src/views/screens/Match/Match';
 import UpdatePassword from './app/src/views/screens/UpdatePassword/UpdatePassword';
 import MyRightSwipes from './app/src/views/screens/MyRightSwipes/MyRightSwipes';
+import AccountDetails from './app/src/views/screens/AccountDetails/AccountDetails';
 
 function App(): JSX.Element {
   const Stack = createStackNavigator();
@@ -318,6 +319,11 @@ function App(): JSX.Element {
         <Stack.Screen
           name="MyRightSwipes"
           component={MyRightSwipes}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="AccountDetails"
+          component={AccountDetails}
           options={{headerShown: false}}
         />
     </Stack.Navigator>
