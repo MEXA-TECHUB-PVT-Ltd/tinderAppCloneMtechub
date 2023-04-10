@@ -54,6 +54,7 @@ import ProfileDetails from './app/src/views/screens/ProfileDetails/ProfileDetail
 import ApplyFilter from './app/src/views/screens/ApplyFilter/ApplyFilter';
 import CreatePost from './app/src/views/screens/CreatePost/CreatePost';
 import Match from './app/src/views/screens/Match/Match';
+import UpdatePassword from './app/src/views/screens/UpdatePassword/UpdatePassword';
 
 function App(): JSX.Element {
   const Stack = createStackNavigator();
@@ -306,6 +307,11 @@ function App(): JSX.Element {
          <Stack.Screen
           name="Match"
           component={Match}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="UpdatePassword"
+          component={UpdatePassword}
           options={{headerShown: false}}
         />
     </Stack.Navigator>
