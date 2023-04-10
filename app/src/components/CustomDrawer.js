@@ -8,7 +8,9 @@ import {
 } from 'react-native-responsive-screen';
 import LogoBlack from '../assets/images/LogoBlack.svg';
 import LogoutIcon from '../assets/images/LogoutIcon.svg';
+import {useNavigation} from '@react-navigation/native';
 export default function CustomDrawer() {
+  const navigation = useNavigation();
   return (
     <View>
       <View style={styles.contentContainer}>
@@ -20,7 +22,9 @@ export default function CustomDrawer() {
       <TouchableOpacity style={styles.contentContainer2}>
         <Text style={styles.textStyle}>Update Profile</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.contentContainer2}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('UpdatePassword')}
+        style={styles.contentContainer2}>
         <Text style={styles.textStyle}>Update Password</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.contentContainer2}>
