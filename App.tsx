@@ -57,7 +57,7 @@ import Match from './app/src/views/screens/Match/Match';
 import UpdatePassword from './app/src/views/screens/UpdatePassword/UpdatePassword';
 import MyRightSwipes from './app/src/views/screens/MyRightSwipes/MyRightSwipes';
 import AccountDetails from './app/src/views/screens/AccountDetails/AccountDetails';
-
+import UpdateProfile from './app/src/views/screens/UpdateProfile/UpdateProfile';
 function App(): JSX.Element {
   const Stack = createStackNavigator();
   const Tab = createBottomTabNavigator();
@@ -324,6 +324,11 @@ function App(): JSX.Element {
          <Stack.Screen
           name="AccountDetails"
           component={AccountDetails}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="UpdateProfile"
+          component={UpdateProfile}
           options={{headerShown: false}}
         />
     </Stack.Navigator>
