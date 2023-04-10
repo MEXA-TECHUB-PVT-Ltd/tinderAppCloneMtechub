@@ -16,7 +16,9 @@ export default function CustomDrawer() {
       <View style={styles.contentContainer}>
         <LogoBlack width={200} height={200} />
       </View>
-      <TouchableOpacity style={styles.contentContainer2}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('AccountDetails')}
+        style={styles.contentContainer2}>
         <Text style={styles.textStyle}>Account Details</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.contentContainer2}>
