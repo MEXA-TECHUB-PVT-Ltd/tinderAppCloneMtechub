@@ -21,7 +21,9 @@ export default function CustomDrawer() {
         style={styles.contentContainer2}>
         <Text style={styles.textStyle}>Account Details</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.contentContainer2}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('UpdateProfile')}
+        style={styles.contentContainer2}>
         <Text style={styles.textStyle}>Update Profile</Text>
       </TouchableOpacity>
       <TouchableOpacity
