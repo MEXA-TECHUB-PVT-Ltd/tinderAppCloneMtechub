@@ -33,7 +33,7 @@ export default function Dashboard() {
           <TouchableOpacity>
             <LeftSwipe width={120} height={120} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Match')}>
             <RightSwipe width={120} height={120} />
           </TouchableOpacity>
           <TouchableOpacity>
@@ -73,9 +73,7 @@ export default function Dashboard() {
             <Menu />
           </TouchableOpacity>
           <Text style={styles.textStyle}>Home</Text>
-          <TouchableOpacity
-          onPress={()=>navigation.navigate('ApplyFilter')}
-          >
+          <TouchableOpacity onPress={() => navigation.navigate('ApplyFilter')}>
             <Filter />
           </TouchableOpacity>
         </View>
