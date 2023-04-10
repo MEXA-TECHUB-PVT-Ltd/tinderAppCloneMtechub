@@ -185,7 +185,9 @@ export default function Chat() {
           <TouchableOpacity>
             <Call style={styles.imageStyle2} width={25} height={25} />
           </TouchableOpacity>
-          <TouchableOpacity>
+          <TouchableOpacity
+          onPress={()=>navigation.navigate('VideoCall')}
+          >
             <Video style={styles.imageStyle2} width={25} height={25} />
           </TouchableOpacity>
         </View>
