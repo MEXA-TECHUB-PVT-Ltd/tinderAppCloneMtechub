@@ -27,7 +27,9 @@ export default function CustomDrawer() {
         style={styles.contentContainer2}>
         <Text style={styles.textStyle}>Update Password</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.contentContainer2}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('MyRightSwipes')}
+        style={styles.contentContainer2}>
         <Text style={styles.textStyle}>My Right Swipes</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.contentContainer2}>
