@@ -69,9 +69,10 @@ export default function Dashboard() {
     <View style={styles.Container}>
       <View style={styles.card}>
         <View style={styles.header}>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.openDrawer()}>
             <Menu />
           </TouchableOpacity>
+
           <Text style={styles.textStyle}>Home</Text>
           <TouchableOpacity onPress={() => navigation.navigate('ApplyFilter')}>
             <Filter />

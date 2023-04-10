@@ -16,7 +16,11 @@ import {appColor} from './app/src/consts/colors';
 import { fontFamily } from './app/src/consts/fonts';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
+//Components
+import CustomDrawer from './app/src/components/CustomDrawer';
 //Images
 import Home from './app/src/assets/images/Home.svg';
 import DotIcon from './app/src/assets/images/DotIcon.svg';
@@ -54,6 +58,38 @@ import Match from './app/src/views/screens/Match/Match';
 function App(): JSX.Element {
   const Stack = createStackNavigator();
   const Tab = createBottomTabNavigator();
+  const Drawer = createDrawerNavigator();
+
+  function AppDrawer() {
+    return (
+      <Drawer.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#ffffff',
+          },
+          headerTintColor: '#000000',
+          drawerActiveBackgroundColor: '#ffffff',
+          drawerActiveTintColor: '#ffffff',
+          drawerInactiveTintColor: '#000000',
+          headerTitleStyle: {},
+          drawerLabelStyle: {
+            marginLeft: -20,
+
+            fontSize: 14,
+          },
+        }}
+        drawerContent={props => <CustomDrawer {...props} />}>
+        <Drawer.Screen
+          name="Home"
+          component={MyTabs}
+          options={{
+            headerShown: false,
+          }}
+        />
+      </Drawer.Navigator>
+    );
+  }
+
   function MyTabs() {
     return (
       <Tab.Navigator
@@ -244,7 +280,7 @@ function App(): JSX.Element {
       />
       <Stack.Screen
           name="UserDashboard"
-          component={MyTabs}
+          component={AppDrawer}
           options={{headerShown: false}}
         />
         <Stack.Screen
