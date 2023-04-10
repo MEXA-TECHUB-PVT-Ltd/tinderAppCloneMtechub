@@ -25,9 +25,9 @@ import DiscoverIcon from './app/src/assets/images/DiscoverIcon.svg';
 import NotificationIcon from './app/src/assets/images/NotificationIcon.svg';
 import UserIcon from './app/src/assets/images/UserIcon.svg';
  //Screens
- import Onboarding from './app/src/views/screens/Onboarding/Onboarding';
- import OnboardingOne from './app/src/views/screens/OnboardingOne/OnboardingOne';
- import OnboardingTwo from './app/src/views/screens/OnboardingTwo/OnboardingTwo';
+import Onboarding from './app/src/views/screens/Onboarding/Onboarding';
+import OnboardingOne from './app/src/views/screens/OnboardingOne/OnboardingOne';
+import OnboardingTwo from './app/src/views/screens/OnboardingTwo/OnboardingTwo';
 import SignIn from './app/src/views/screens/SignIn/SignIn';
 import ForgetPassword from './app/src/views/screens/ForgetPassword/ForgetPassword';
 import Verification from './app/src/views/screens/Verification/Verification';
@@ -49,6 +49,7 @@ import Chat from './app/src/views/screens/Chat/Chat';
 import ProfileDetails from './app/src/views/screens/ProfileDetails/ProfileDetails';
 import ApplyFilter from './app/src/views/screens/ApplyFilter/ApplyFilter';
 import CreatePost from './app/src/views/screens/CreatePost/CreatePost';
+import Match from './app/src/views/screens/Match/Match';
 
 function App(): JSX.Element {
   const Stack = createStackNavigator();
@@ -264,6 +265,11 @@ function App(): JSX.Element {
           <Stack.Screen
           name="CreatePost"
           component={CreatePost}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="Match"
+          component={Match}
           options={{headerShown: false}}
         />
     </Stack.Navigator>
