@@ -58,6 +58,11 @@ import UpdatePassword from './app/src/views/screens/UpdatePassword/UpdatePasswor
 import MyRightSwipes from './app/src/views/screens/MyRightSwipes/MyRightSwipes';
 import AccountDetails from './app/src/views/screens/AccountDetails/AccountDetails';
 import UpdateProfile from './app/src/views/screens/UpdateProfile/UpdateProfile';
+import MyMatches from './app/src/views/screens/MyMatches/MyMatches';
+import PrivacyPolicy from './app/src/views/screens/PrivacyPolicy/PrivacyPolicy';
+import TermsandConditions from './app/src/views/screens/TermsandConditions/TermsandConditions';
+import VideoCall from './app/src/views/screens/VideoCall/VideoCall';
+
 function App(): JSX.Element {
   const Stack = createStackNavigator();
   const Tab = createBottomTabNavigator();
@@ -329,6 +334,26 @@ function App(): JSX.Element {
          <Stack.Screen
           name="UpdateProfile"
           component={UpdateProfile}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="MyMatches"
+          component={MyMatches}
+          options={{headerShown: false}}
+        />
+         <Stack.Screen
+          name="PrivacyPolicy"
+          component={PrivacyPolicy}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="TermsandConditions"
+          component={TermsandConditions}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="VideoCall"
+          component={VideoCall}
           options={{headerShown: false}}
         />
     </Stack.Navigator>
